@@ -51,8 +51,8 @@ function Info({provinceList}) {
       // d > 300 ? '#fb6a4a' :
       d > 300 ? '#1c478b' :
       d > 200  ? '#1c478b' :
-      d > 100  ? '#dde3e9' :
-                  '#dde3e9';
+      d > 100  ? '#f3b2b6' :
+                  '#f3b2b6';
     // 1c478b
     }
 
