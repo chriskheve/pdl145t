@@ -110,6 +110,12 @@ import TerritoireSandoa from './Lualaba/TerritoireSandoa';
 import TerritoireDilolo from './Lualaba/TerritoireDilolo';
 import TerritoireLubudi from './Lualaba/TerritoireLubudi';
 import TerritoireMutshatsha from './Lualaba/TerritoireMutshatsha';
+import TerritoireKambove from './HautKatanga/TerritoireKambove';
+import TerritoirePweto from './HautKatanga/TerritoirePweto';
+import TerritoireMitwaba from './HautKatanga/TerritoireMitwaba';
+import TerritoireKasenga from './HautKatanga/TerritoireKasenga';
+import TerritoireSakania from './HautKatanga/TerritoireSakania';
+import TerritoireKipushi from './HautKatanga/TerritoireKipushi';
 
 const Routes = [
     {
@@ -921,6 +927,50 @@ const Routes = [
         exact: true,
         pageTitle: "Territoire de Kapanga",
         component: TerritoireKapanga
+    },
+    
+    // HautKatanga
+    {
+        path: "/territoire-kipushi",
+        name: 'Territoire-kipushi',
+        exact: true,
+        pageTitle: "Territoire de Kipushi",
+        component: TerritoireKipushi
+    },
+    {
+        path: "/territoire-sakania",
+        name: 'Territoire-sakania',
+        exact: true,
+        pageTitle: "Territoire de Sakania",
+        component: TerritoireSakania
+    },
+    {
+        path: "/territoire-kasenga",
+        name: 'Territoire-kasenga',
+        exact: true,
+        pageTitle: "Territoire de Kasenga",
+        component: TerritoireKasenga
+    },
+    {
+        path: "/territoire-mitwaba",
+        name: 'Territoire-mitwaba',
+        exact: true,
+        pageTitle: "Territoire de Mitwaba",
+        component: TerritoireMitwaba
+    },
+    {
+        path: "/territoire-pweto",
+        name: 'Territoire-pweto',
+        exact: true,
+        pageTitle: "Territoire de Pweto",
+        component: TerritoirePweto
+    },
+    {
+        path: "/territoire-kambove",
+        name: 'Territoire-kambove',
+        exact: true,
+        pageTitle: "Territoire de Kambove",
+        component: TerritoireKambove
     },
 ];
 

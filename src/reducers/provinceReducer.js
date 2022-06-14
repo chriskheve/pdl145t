@@ -3,7 +3,7 @@ import {
 } from '../actions/provinceAction'
 
 const initialState = {
-    provinceDataState : {}
+    provinceDataState : ""
 }
 
 export default (state = initialState, action) => {

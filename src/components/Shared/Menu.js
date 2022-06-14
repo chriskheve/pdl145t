@@ -18,6 +18,10 @@ import {
 	statisticsAction, friendListAction,
 	statisticsCloseAction, friendListCloseAction, toggleLeftMenuAction
 } from '../../actions/settingsAction';
+
+import {
+	toggleProvinceSidebar
+} from '../../actions/sidebarAction';
 import Routes from '../Route';
 
 
@@ -96,12 +100,18 @@ class Menu extends Component {
 		}
 	}
 
+	
+	toggleProvinceSidebar(param) {
+		this.props.toggleProvinceSidebar(param)
+	}
+
 	handler(parentlink, nochildlink) {
 		this.setState({
 			parentlink: parentlink,
 			childlink: nochildlink,
 		});
 	}
+	
 
 	handleDarkMode(e) {
 		this.props.darkModeAction(e.target.checked)
@@ -374,7 +384,7 @@ class Menu extends Component {
 						"to": "/territoire-lubao"
 					},
 					{
-						"id": 35,
+						"id": 36,
 						"label": "Mwene-Ditu",
 						"to": "/territoire-mwene-ditu"
 					},
@@ -559,42 +569,49 @@ class Menu extends Component {
 					},
 				]
 			},
-			// {
-			// 	"id": 27,
-			// 	"icon": "icon-lock",
-			// 	"label": "Authentication",
-			// 	content: [
-			// 		{
-			// 			"id": 28,
-			// 			"label": "Login",
-			// 			"to": "/login"
-			// 		},
-			// 		{
-			// 			"id": 29,
-			// 			"label": "Register",
-			// 			"to": "/signup"
-			// 		},
-			// 		{
-			// 			"id": 30,
-			// 			"label": "Forgot Password",
-			// 			"to": "/forgotpassword"
-			// 		},
-			// 		{
-			// 			"id": 31,
-			// 			"label": "404 error",
-			// 			"to": "/notfound"
-			// 		},
-			// 		{
-			// 			"id": 32,
-			// 			"label": "500 Error",
-			// 			"to": "/internalserver"
-			// 		}
-			// 	]
-			// },
+
+			// Haut-Kkatanga
+			{
+				"id": 90,
+				"icon": "fa fa-folder",
+				"label": "Haut-Katanga",
+				content: [
+					{
+						"id": 91,
+						"label": "Kipushi",
+						"to": "/territoire-kipushi"
+					},
+					{
+						"id": 92,
+						"label": "Sakania",
+						"to": "/territoire-sakania"
+					},
+					{
+						"id": 93,
+						"label": "Kasenga",
+						"to": "/territoire-kasenga"
+					},
+					{
+						"id": 94,
+						"label": "Mitwaba",
+						"to": "/territoire-mitwaba"
+					},
+					{
+						"id": 95,
+						"label": "Pweto",
+						"to": "/territoire-Pweto"
+					},
+					{
+						"id": 96,
+						"label": "Kambove",
+						"to": "/territoire-kambove"
+					},
+				]
+			},
 			
 		];
 		const { isOpenRightSidebar, isOpenUserMenu } = this.state
-		const { darkMinSidebar, istoggleLeftMenu, friendListOpen, statisticsOpen, statisticsClose, friendListClose } = this.props
+		const { darkMinSidebar, istoggleLeftMenu, friendListOpen, statisticsOpen, statisticsClose, friendListClose, isOpen, provinceDataState  } = this.props
 		const pageHeading = Routes.filter((route) => route.path === this.props.location.pathname)
 		
 		return (
@@ -1062,10 +1079,10 @@ class Menu extends Component {
 								</div>
 							</div>
 						</div>
-						<div className={`user_div ${isOpenUserMenu && 'open'}`}>
+						<div className={`right_sidebar ${isOpen && 'open'}`}>
 							<h5 className="brand-name mb-4">
-								Epic HR
-							<p className="user_btn" onClick={this.toggleUserMenu}>
+								{provinceDataState}
+							<p className="user_btn" onClick={()=>{this.toggleProvinceSidebar(false)}}>
 									<i className="icon-logout" />
 								</p>
 							</h5>
@@ -1535,7 +1552,9 @@ const mapStateToProps = state => ({
 	friendListOpen: state.settings.isFriendList,
 	statisticsClose: state.settings.isStatisticsClose,
 	friendListClose: state.settings.isFriendListClose,
-	istoggleLeftMenu: state.settings.isToggleLeftMenu
+	istoggleLeftMenu: state.settings.isToggleLeftMenu,
+	isOpen: state.updateSidebarState.isOpen,
+	provinceDataState: state.updateProvinceState.provinceDataState 
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -1555,6 +1574,7 @@ const mapDispatchToProps = dispatch => ({
 	friendListAction: (e) => dispatch(friendListAction(e)),
 	statisticsCloseAction: (e) => dispatch(statisticsCloseAction(e)),
 	friendListCloseAction: (e) => dispatch(friendListCloseAction(e)),
-	toggleLeftMenuAction: (e) => dispatch(toggleLeftMenuAction(e))
+	toggleLeftMenuAction: (e) => dispatch(toggleLeftMenuAction(e)),
+	toggleProvinceSidebar: (e) => dispatch(toggleProvinceSidebar(e)) 
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);

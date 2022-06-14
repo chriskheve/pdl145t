@@ -12,7 +12,8 @@ import {Icon} from 'leaflet'
 import { useHistory } from 'react-router-dom';
 import { getProvince } from '../../../api/province';
 import { setProvince } from '../../../actions/provinceAction';
-import { useDispatch } from 'react-redux';
+import { toggleProvinceSidebar, setProvinceData } from '../../../actions/sidebarAction';
+import { useDispatch, useSelector } from 'react-redux';
 import "leaflet.heat";
 import { addressPoints } from "./addressPoints";
 
@@ -21,17 +22,21 @@ function Info({provinceList}) {
   const dispatch = useDispatch()
   const map = useMap()
   
+	const isOpen  = useSelector(state=> state.updateSidebarState.isOpen)  
+  
 
   
   const handleProvince = (prov) => {
+    dispatch(toggleProvinceSidebar(true))
+    dispatch(setProvince(prov))
     for (let i = 0; i < provinceList.length; i++) {
       
-      if (prov.toLowerCase() === provinceList[i].nom.toLowerCase()) {
+      // if (prov.toLowerCase() === provinceList[i].nom.toLowerCase()) {
         
-        console.log(prov.toLowerCase())
-        dispatch(setProvince(provinceList[i]))
-        history.push('/hr-assure') 
-      } 
+      //   console.log(prov.toLowerCase())
+      //   dispatch(setProvince(provinceList[i]))
+      //   history.push('/hr-assure') 
+      // } 
     }
   }
   
@@ -46,8 +51,8 @@ function Info({provinceList}) {
       // d > 300 ? '#fb6a4a' :
       d > 300 ? '#1c478b' :
       d > 200  ? '#1c478b' :
-      d > 100  ? '#FFFF00' :
-                  '#FFFF00';
+      d > 100  ? '#dde3e9' :
+                  '#dde3e9';
     // 1c478b
     }
 
@@ -124,7 +129,7 @@ function Info({provinceList}) {
 
 	function zoomToFeature(e) {
     var layer = e.target;
-    add_layer(e.target)
+    // add_layer(e.target)
 		// map.fitBounds(e.target.getBounds());
     // setVilleData(layer.feature.properties.ville)
     // console.log("layer is...", layer.feature.properties.name)

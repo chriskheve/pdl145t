@@ -6,6 +6,10 @@ import './Header.css'
 
 
 const Header = (props) => {
+	
+	let current = new Date();
+	const event = new Date(Date.now());
+	const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 	let history = useHistory() 
 	const notificationState = useSelector(state=> state.updateNotificationState.notificationState)  
@@ -29,9 +33,10 @@ const Header = (props) => {
 			<div className="container-fluid">
 				<div className="page-header text-white">
 					<div className="left">
-						<h1 className="page-title white-color " style={{textColor : "white"}} >{props.dataFromSubParent}</h1>
+						<h1 className="page-title white-color "  >{props.dataFromSubParent}</h1>
 					</div>
 					<div className="right">
+					<h1 className="page-title white-color "  >{event.toLocaleDateString("Fr-fr", options)} | {current.getHours()}:{current.getMinutes()} </h1>
 						<div className="notification d-flex">
 							{/* <div className="dropdown d-flex">
 								<a

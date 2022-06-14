@@ -1,5 +1,5 @@
 const initialState = {
-	isDarkMode: true, isDarkHeader: false, isFixNavbar: false, isMinSidebar: false, isDarkSidebar: false, isIconColor: false, isGradientColor: false,
+	isDarkMode: false, isDarkHeader: false, isFixNavbar: false, isMinSidebar: false, isDarkSidebar: false, isIconColor: false, isGradientColor: false,
 	isRtl: false,
 	isFont: "font-montserrat",
 	isSubMenuIcon: "list-a",
