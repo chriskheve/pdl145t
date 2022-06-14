@@ -1081,9 +1081,9 @@ class Menu extends Component {
 						</div>
 						<div className={`right_sidebar ${isOpen && 'open'}`}>
 							<h5 className="brand-name mb-4">
-								{provinceDataState}
+								
 							<p className="user_btn" onClick={()=>{this.toggleProvinceSidebar(false)}}>
-									<i className="icon-logout" />
+									<i className="icon-login" />
 								</p>
 							</h5>
 							<div className="card">
@@ -1095,7 +1095,7 @@ class Menu extends Component {
 											alt="avatar"
 										/>
 										<div className="media-body">
-											<h5 className="m-0">Sara Hopkins</h5>
+											<h5 className="m-0">{provinceDataState}</h5>
 											<p className="text-muted mb-0">Webdeveloper</p>
 											<ul className="social-links list-inline mb-0 mt-2">
 												<li className="list-inline-item">
