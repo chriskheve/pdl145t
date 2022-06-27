@@ -4,3 +4,9 @@ export const setProvince = provinceData => {
       provinceData: provinceData
     };
 };
+export const setGeojson = geojsonData => {
+  return {
+    type: 'SET_GEOJSON',
+    geojsonData: geojsonData
+  };
+};

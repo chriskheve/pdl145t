@@ -3,11 +3,13 @@ import L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import './Legend.css'
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
-import school from "../../../assets/images/icons/education.png"
-import administratif from "../../../assets/images/icons/city-hall.png"
-import healthcare from "../../../assets/images/icons/healthcare.png"
-import hospital from "../../../assets/images/icons/hospital.png"
-import forage from "../../../assets/images/icons/oil-pump.png"
+import school from "../../../assets/images/icons/location/school.png"
+import administratif from "../../../assets/images/icons/location/administratif.png"
+import healthcare from "../../../assets/images/icons/location/healthcare.png"
+import energie from "../../../assets/images/icons/location/energie.png"
+import forage from "../../../assets/images/icons/location/forage.png"
+import logement from "../../../assets/images/icons/location/logement.png"
+import marche from "../../../assets/images/icons/location/marche.png"
 
 
 
@@ -23,7 +25,9 @@ function Legend() {
       d === "Bâtiment administratif" ? administratif :
       d === "Centre de santé" ? healthcare :
       d === "Forage"  ? forage :
-                  hospital;
+      d === "Logement"  ? logement :
+      d === "Marché communautaire"  ? marche :
+      energie;
     
     }
       
@@ -33,7 +37,7 @@ function Legend() {
 
       legend.onAdd = () => {
         var div = L.DomUtil.create("div", "info legend"),
-        grades = ["Ecole", "Hôpital", "Forage", "Centre de santé", "Bâtiment administratif"],
+        grades = ["Ecole", "Energie", "Forage", "Centre de santé", "Bâtiment administratif", "Logement", "Marché communautaire"],
         labels = [],
         from, to;
 

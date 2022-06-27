@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react'
 import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON, useMap } from 'react-leaflet'
 import mapDefault from './mapDefault.json'
+import cs from './cs.json'
+import localite from './localite.json'
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import school from "../../../assets/images/icons/education.png"
-import administratif from "../../../assets/images/icons/city-hall.png"
-import healthcare from "../../../assets/images/icons/healthcare.png"
-import hospital from "../../../assets/images/icons/hospital.png"
-import forage from "../../../assets/images/icons/oil-pump.png"
 import {Icon} from 'leaflet'
 import { useHistory } from 'react-router-dom';
 import { getProvince } from '../../../api/province';
@@ -16,29 +14,37 @@ import { toggleProvinceSidebar, setProvinceData } from '../../../actions/sidebar
 import { useDispatch, useSelector } from 'react-redux';
 import "leaflet.heat";
 import { addressPoints } from "./addressPoints";
+import { getEntite } from '../../../api/type_ouvrage';
 
-function Info({provinceList}) {
+function Info({provinceList, geojsonData}) {
 	let history = useHistory()
+  const [provinces, setProvinceList] = useState([])
   const dispatch = useDispatch()
   const map = useMap()
   
 	const isOpen  = useSelector(state=> state.updateSidebarState.isOpen)  
+	// const geojsonData  = useSelector(state=> state.updateProvinceState.geojsonDataState)  
   
 
   
   const handleProvince = (prov) => {
-    dispatch(toggleProvinceSidebar(true))
-    dispatch(setProvince(prov))
-    for (let i = 0; i < provinceList.length; i++) {
+    // dispatch(setProvince(prov))
+    
+    console.log("provinceList", provinceList.provinces)
+    dispatch(setProvince(provinceList))
+    for (let i = 0; i < provinceList.provinces.length; i++) {
       
-      // if (prov.toLowerCase() === provinceList[i].nom.toLowerCase()) {
+      if (prov.toLowerCase() === provinceList.provinces[i].nom.toLowerCase()) {
         
-      //   console.log(prov.toLowerCase())
-      //   dispatch(setProvince(provinceList[i]))
-      //   history.push('/hr-assure') 
-      // } 
+        console.log(prov.toLowerCase())
+        dispatch(setProvince(provinceList.provinces[i]))
+        dispatch(toggleProvinceSidebar(true))
+        // history.push('/hr-assure') 
+      } 
     }
   }
+
+  
   
   useEffect(() => {
 
@@ -184,17 +190,19 @@ function Info({provinceList}) {
 
 // L.heatLayer(points).addTo(map);
 
-
+  
       info.addTo(map);
       geojson = L.geoJson(mapDefault, {
         style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
 
+    
+    // L.geoJson(JSON.parse(cs)).addTo(map);
     }
     
   console.log(map)
-  }, [map, provinceList]); //here add map
+  }, [map, provinceList, geojsonData]); //here add map
   const showMarker=()=>(
     
     <Marker 

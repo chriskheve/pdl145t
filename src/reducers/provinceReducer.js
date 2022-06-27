@@ -1,9 +1,11 @@
 import {
-    setProvince
+    setProvince,
+    setGeojson
 } from '../actions/provinceAction'
 
 const initialState = {
-    provinceDataState : ""
+    provinceDataState : "",
+    geojsonDataState: "accueil"
 }
 
 export default (state = initialState, action) => {
@@ -11,6 +13,10 @@ export default (state = initialState, action) => {
         case 'SET_PROVINCE' : 
             return Object.assign({}, state, {
                 provinceDataState: action.provinceData
+            })
+        case 'SET_GEOJSON' : 
+            return Object.assign({}, state, {
+                geojsonDataState: action.geojsonData
             })
         default:
             return state;

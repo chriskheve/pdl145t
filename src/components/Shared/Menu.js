@@ -1095,8 +1095,10 @@ class Menu extends Component {
 											alt="avatar"
 										/>
 										<div className="media-body">
-											<h5 className="m-0">{provinceDataState}</h5>
-											<p className="text-muted mb-0">Webdeveloper</p>
+											<h5 className="m-0">
+												{provinceDataState && provinceDataState.nom}
+											</h5>
+											<p className="text-muted mb-0">{provinceDataState && provinceDataState.chef_lieu}</p>
 											<ul className="social-links list-inline mb-0 mt-2">
 												<li className="list-inline-item">
 													<a
@@ -1146,7 +1148,7 @@ class Menu extends Component {
 							{statisticsClose ?
 								<div className={`card ${statisticsOpen ? 'card-collapsed' : ""}`}>
 									< div className="card-header">
-										<h3 className="card-title">Statistics</h3>
+										<h3 className="card-title">Statistiques</h3>
 										<div className="card-options">
 											<span className="card-options-collapse" data-toggle="card-collapse" onClick={() => this.handleStatistics(!statisticsOpen)}>
 												<i className="fe fe-chevron-up" />
@@ -1160,11 +1162,11 @@ class Menu extends Component {
 										<div className="text-center">
 											<div className="row">
 												<div className="col-6 pb-3">
-													<label className="mb-0">Balance</label>
+													<label className="mb-0">Ouvrages</label>
 													<h4 className="font-30 font-weight-bold">$545</h4>
 												</div>
 												<div className="col-6 pb-3">
-													<label className="mb-0">Growth</label>
+													<label className="mb-0">Pourcentage</label>
 													<h4 className="font-30 font-weight-bold">27%</h4>
 												</div>
 											</div>
