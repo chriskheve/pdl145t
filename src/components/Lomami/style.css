@@ -1,0 +1,137 @@
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #c0b283;
+    background: #dcd0c0;
+    margin: 2rem 0;
+}
+p {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+@media all and (min-width: 480px) {
+    p {
+        font-size: 1.3rem;
+   }
+}
+.responsiveImg {
+    max-width: 100%;
+}
+.heroHeadline {
+    font-size: 4rem;
+    text-align: center;
+    color: #c0b283;
+    line-height: 4rem;
+}
+@media all and (min-width: 768px) and (min-height: 570px) {
+    .heroHeadline {
+        margin-top: 0;
+        font-size: 4.8rem;
+        line-height: 4.4rem;
+   }
+}
+.heroText {
+    font-size: 1.6rem;
+    text-align: justify;
+}
+.heroText:last-child {
+    margin-bottom: 0;
+}
+@media all and (min-width: 768px) and (min-height: 570px) {
+    .heroText {
+        font-size: 2rem;
+   }
+}
+.heroList {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+.heroList a {
+    color: #dcd0c0;
+    text-decoration: none;
+}
+.heroList a:hover, .heroList a:active, .heroList a:visited {
+    color: #dcd0c0;
+}
+.logo {
+    margin: 2rem 0;
+}
+.logofill {
+    fill: #373737;
+}
+.firstSlide {
+    position: relative;
+    color: #f4f4f4;
+    background-color: #373737;
+}
+@media all and (min-height: 570px) {
+    .firstSlide {
+        min-height: 80vh;
+   }
+}
+@media all and (min-height: 570px) {
+    .firstSlideCenterVert {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+   }
+}
+.firstSlideCenterHoriz {
+    max-width: 460px;
+    margin: auto;
+    padding: 20px;
+}
+.secondSlide {
+    max-width: 768px;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.examples, .examplesDemo {
+    padding: 1rem;
+    background-color: #fefefe;
+}
+.examplesDemo {
+    background-color: #dcd0c0;
+}
+.examplesDemo h2, .examplesDemo h3 {
+    color: #fefefe;
+}
+.examplesInner, .examplesInnerCenter {
+    max-width: 100rem;
+    margin: auto;
+}
+.examplesInnerCenter {
+    text-align: center;
+}
+.example .headline {
+    text-align: left;
+}
+.headline {
+    text-align: center;
+    color: #c0b283;
+}
+.select {
+    width: 300px;
+}
+.slider {
+    max-width: 800px;
+}
+.externalLink {
+    vertical-align: baseline;
+    fill: #dcd0c0;
+    margin: 0 0.4rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    position: relative;
+    top: 0.2rem;
+}
+.verticalSlider {
+    width: 100%;
+    max-width: 300px;
+}
+.express {
+    text-align: center;
+    padding: 2rem;
+}

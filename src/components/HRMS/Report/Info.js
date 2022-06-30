@@ -32,16 +32,19 @@ function Info({provinceList, geojsonData}) {
     
     console.log("provinceList", provinceList.provinces)
     dispatch(setProvince(provinceList))
-    for (let i = 0; i < provinceList.provinces.length; i++) {
-      
-      if (prov.toLowerCase() === provinceList.provinces[i].nom.toLowerCase()) {
-        
-        console.log(prov.toLowerCase())
-        dispatch(setProvince(provinceList.provinces[i]))
-        dispatch(toggleProvinceSidebar(true))
-        // history.push('/hr-assure') 
-      } 
-    }
+   if(provinceList && provinceList.provinces){
+
+     for (let i = 0; i <  provinceList.provinces.length; i++) {
+       
+       if (prov.toLowerCase() === provinceList.provinces[i].nom.toLowerCase()) {
+         
+         console.log(prov.toLowerCase())
+         dispatch(setProvince(provinceList.provinces[i]))
+         dispatch(toggleProvinceSidebar(true))
+         // history.push('/hr-assure') 
+       } 
+     }
+   }
   }
 
   
@@ -72,9 +75,9 @@ function Info({provinceList, geojsonData}) {
         return {
           weight: 2,
           opacity: 1,
-          color: 'white',
+          color: '#1C478B',
           dashArray: '3',
-          fillOpacity: 0.7,
+          fillOpacity: 0.003,
           // fillColor: getColor(10)
           fillColor: getColor(feature.properties.liveCases)
         };
@@ -115,7 +118,7 @@ function Info({provinceList, geojsonData}) {
           weight: 5,
           color: '#FF0000',
           dashArray: '',
-          fillOpacity: 0.7
+          fillOpacity: 0.02
         });
 
         if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {

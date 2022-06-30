@@ -6,6 +6,8 @@ import Header from '../Shared/Header';
 import Footer from '../Shared/Footer';
 import DefaultLink from './DefaultLink';
 import  drc from '../../assets/images/flags/democratic-republic-of-congo.png'
+import  bcecoBlue from '../../assets/images/bceco-blue.PNG'
+// bcecoBlue
 
 
 import {
@@ -629,52 +631,9 @@ class Menu extends Component {
 										{/* <i className="fe fe-command brand-logo" /> */}
 										<img src={drc} style={{width: "35px" }} alt="drc" /> 
 									</NavLink> 
-									{/* <div className="dropdown">
-										<NavLink to="/page-search" className="nav-link icon">
-											<i className="fa fa-search" />
-										</NavLink>
-										<NavLink to="/app-calendar" className="nav-link icon app_inbox">
-											<i className="fa fa-calendar" />
-										</NavLink>
-										<NavLink to="/app-contact" className="nav-link icon xs-hide">
-											<i className="fa fa-id-card-o" />
-										</NavLink>
-										<NavLink to="/app-chat" className="nav-link icon xs-hide">
-											<i className="fa fa-comments-o" />
-										</NavLink>
-										<NavLink to="/app-filemanager" className="nav-link icon app_file xs-hide">
-											<i className="fa fa-folder-o" />
-										</NavLink>
-									</div> */}
 								</div>
 								<div className="hright">
 									<div className="dropdown">
-										{/* <a href="#!" class="nav-link icon theme_btn">
-										<i
-											class="fa fa-paint-brush"
-											data-toggle="tooltip"
-											data-placement="right"
-											title="Themes"
-										></i>
-									</a> */}
-										{/* <span className="nav-link icon settingbar" onClick={this.toggleRightSidebar}>
-											<i
-												className="fa fa-gear fa-spin"
-												data-toggle="tooltip"
-												data-placement="right"
-												title="Settings"
-											/>
-										</span> */}
-										{/* <p className="nav-link user_btn" onClick={this.toggleUserMenu}>
-											<img
-												className="avatar"
-												src="/assets/images/user.png"
-												alt="fake_alr"
-												data-toggle="tooltip"
-												data-placement="right"
-												title="User Menu"
-											/>
-										</p> */}
 										<p className="nav-link icon menu_toggle" onClick={() => this.toggleLeftMenu(!istoggleLeftMenu)}>
 											<i className="fa  fa-align-left" />
 										</p>
@@ -698,386 +657,6 @@ class Menu extends Component {
 								</a>
 								</li>
 							</ul>
-							<div className="tab-content">
-								<div
-									role="tabpanel"
-									className="tab-pane vivify fadeIn active"
-									id="Settings"
-									aria-expanded="true"
-								>
-									<div className="mb-4">
-										<h6 className="font-14 font-weight-bold text-muted">Font Style</h6>
-										<div className="custom-controls-stacked font_setting">
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="font"
-													defaultChecked
-													defaultValue="font-opensans"
-													onChange={() => this.handleFont('font-opensans')}
-												/>
-												<span className="custom-control-label">Open Sans Font</span>
-											</label>
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="font"
-													defaultValue="font-montserrat"
-													onChange={() => this.handleFont('font-montserrat')}
-												/>
-												<span className="custom-control-label">Montserrat Google Font</span>
-											</label>
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="font"
-													onChange={() => this.handleFont('font-roboto')}
-												/>
-												<span className="custom-control-label">Robot Google Font</span>
-											</label>
-										</div>
-									</div>
-									<div className="mb-4">
-										<h6 className="font-14 font-weight-bold text-muted">Selected Menu Icon</h6>
-										<div className="custom-controls-stacked arrow_option">
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="marrow"
-													defaultValue="arrow-a"
-													onChange={() => this.handleMenuIcon('list-a')}
-												/>
-												<span className="custom-control-label">A</span>
-											</label>
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="marrow"
-													defaultValue="arrow-b"
-													onChange={() => this.handleMenuIcon('list-b')}
-												/>
-												<span className="custom-control-label">B</span>
-											</label>
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="marrow"
-													defaultValue="arrow-c"
-													defaultChecked
-													onChange={() => this.handleMenuIcon('list-c')}
-												/>
-												<span className="custom-control-label">C</span>
-											</label>
-										</div>
-
-										<h6 className="font-14 font-weight-bold mt-4 text-muted">SubMenu List Icon</h6>
-										<div className="custom-controls-stacked list_option">
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="listicon"
-													defaultValue="list-a"
-													defaultChecked
-													onChange={() => this.handleSubMenuIcon('list-a')}
-												/>
-												<span className="custom-control-label">A</span>
-											</label>
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="listicon"
-													defaultValue="list-b"
-													onChange={() => this.handleSubMenuIcon('list-b')}
-												/>
-												<span className="custom-control-label">B</span>
-											</label>
-											<label className="custom-control custom-radio custom-control-inline">
-												<input
-													type="radio"
-													className="custom-control-input"
-													name="listicon"
-													defaultValue="list-c"
-													onChange={() => this.handleSubMenuIcon('list-c')}
-												/>
-												<span className="custom-control-label">C</span>
-											</label>
-										</div>
-									</div>
-									<div>
-										<h6 className="font-14 font-weight-bold mt-4 text-muted">General Settings</h6>
-										<ul className="setting-list list-unstyled mt-1 setting_switch">
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">Night Mode</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-darkmode"
-														onChange={(e) => this.handleDarkMode(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">Fix Navbar top</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-fixnavbar"
-														onChange={(e) => this.handleFixNavbar(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">Header Dark</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-pageheader"
-														onChange={(e) => this.handleDarkHeader(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">Min Sidebar Dark</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-min_sidebar"
-														onChange={(e) => this.handleMinSidebar(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">Sidebar Dark</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-sidebar"
-														onChange={(e) => this.handleSidebar(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">Icon Color</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-iconcolor"
-														onChange={(e) => this.handleIconColor(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">Gradient Color</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-gradient"
-														onChange={(e) => this.handleGradientColor(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-
-											<li>
-												<label className="custom-switch">
-													<span className="custom-switch-description">RTL Support</span>
-													<input
-														type="checkbox"
-														name="custom-switch-checkbox"
-														className="custom-switch-input btn-rtl"
-														onChange={(e) => this.handleRtl(e)}
-													/>
-													<span className="custom-switch-indicator" />
-												</label>
-											</li>
-
-										</ul>
-									</div>
-									<hr />
-									<div className="form-group">
-										<label className="d-block">
-											Storage <span className="float-right">77%</span>
-										</label>
-										<div className="progress progress-sm">
-											<div
-												className="progress-bar"
-												role="progressbar"
-												aria-valuenow={77}
-												aria-valuemin={0}
-												aria-valuemax={100}
-												style={{ width: '77%' }}
-											/>
-										</div>
-										<button type="button" className="btn btn-primary btn-block mt-3">
-											Upgrade Storage
-									</button>
-									</div>
-								</div>
-								<div role="tabpanel" className="tab-pane vivify fadeIn" id="activity" aria-expanded="false">
-									<ul className="new_timeline mt-3">
-										<li>
-											<div className="bullet pink" />
-											<div className="time">11:00am</div>
-											<div className="desc">
-												<h3>Attendance</h3>
-												<h4>Computer Class</h4>
-											</div>
-										</li>
-										<li>
-											<div className="bullet pink" />
-											<div className="time">11:30am</div>
-											<div className="desc">
-												<h3>Added an interest</h3>
-												<h4>“Volunteer Activities”</h4>
-											</div>
-										</li>
-										<li>
-											<div className="bullet green" />
-											<div className="time">12:00pm</div>
-											<div className="desc">
-												<h3>Developer Team</h3>
-												<h4>Hangouts</h4>
-												<ul className="list-unstyled team-info margin-0 p-t-5">
-													<li>
-														<img src="/assets/images/xs/avatar1.jpg" alt="Avatar" />
-													</li>
-													<li>
-														<img src="/assets/images/xs/avatar2.jpg" alt="Avatar" />
-													</li>
-													<li>
-														<img src="/assets/images/xs/avatar3.jpg" alt="Avatar" />
-													</li>
-													<li>
-														<img src="/assets/images/xs/avatar4.jpg" alt="Avatar" />
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<div className="bullet green" />
-											<div className="time">2:00pm</div>
-											<div className="desc">
-												<h3>Responded to need</h3>
-												<a href="#!">“In-Kind Opportunity”</a>
-											</div>
-										</li>
-										<li>
-											<div className="bullet orange" />
-											<div className="time">1:30pm</div>
-											<div className="desc">
-												<h3>Lunch Break</h3>
-											</div>
-										</li>
-										<li>
-											<div className="bullet green" />
-											<div className="time">2:38pm</div>
-											<div className="desc">
-												<h3>Finish</h3>
-												<h4>Go to Home</h4>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div className="theme_div">
-							<div className="card">
-								<div className="card-body">
-									<ul className="list-group list-unstyled">
-										<li className="list-group-item mb-2">
-											<p>Default Theme</p>
-											<a href="../main/index.html">
-												<img
-													src="/assets/images/themes/default.png"
-													className="img-fluid"
-													alt="fake_url"
-												/>
-											</a>
-										</li>
-										<li className="list-group-item mb-2">
-											<p>Night Mode Theme</p>
-											<a href="../dark/index.html">
-												<img
-													src="/assets/images/themes/dark.png"
-													className="img-fluid"
-													alt="fake_url"
-												/>
-											</a>
-										</li>
-										<li className="list-group-item mb-2">
-											<p>RTL Version</p>
-											<a href="../rtl/index.html">
-												<img
-													src="/assets/images/themes/rtl.png"
-													className="img-fluid"
-													alt="fake_url"
-												/>
-											</a>
-										</li>
-										<li className="list-group-item mb-2">
-											<p>Theme Version2</p>
-											<a href="../theme2/index.html">
-												<img
-													src="/assets/images/themes/theme2.png"
-													className="img-fluid"
-													alt="fake_url"
-												/>
-											</a>
-										</li>
-										<li className="list-group-item mb-2">
-											<p>Theme Version3</p>
-											<a href="../theme3/index.html">
-												<img
-													src="/assets/images/themes/theme3.png"
-													className="img-fluid"
-													alt="fake_url"
-												/>
-											</a>
-										</li>
-										<li className="list-group-item mb-2">
-											<p>Theme Version4</p>
-											<a href="../theme4/index.html">
-												<img
-													src="/assets/images/themes/theme4.png"
-													className="img-fluid"
-													alt="fake_url"
-												/>
-											</a>
-										</li>
-										<li className="list-group-item mb-2">
-											<p>Horizontal Version</p>
-											<a href="../horizontal/index.html">
-												<img
-													src="/assets/images/themes/horizontal.png"
-													className="img-fluid"
-													alt="fake_url"
-												/>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
 						</div>
 						<div className={`right_sidebar ${isOpen && 'open'}`}>
 							<h5 className="brand-name mb-4">
@@ -1091,7 +670,7 @@ class Menu extends Component {
 									<div className="media">
 										<img
 											className="avatar avatar-xl mr-3"
-											src="/assets/images/user.png"
+											src={bcecoBlue}
 											alt="avatar"
 										/>
 										<div className="media-body">
@@ -1163,62 +742,123 @@ class Menu extends Component {
 											<div className="row">
 												<div className="col-6 pb-3">
 													<label className="mb-0">Ouvrages</label>
-													<h4 className="font-30 font-weight-bold">$545</h4>
+													<h4 className="font-30 font-weight-bold">0</h4>
 												</div>
 												<div className="col-6 pb-3">
 													<label className="mb-0">Pourcentage</label>
-													<h4 className="font-30 font-weight-bold">27%</h4>
+													<h4 className="font-30 font-weight-bold">0</h4>
 												</div>
 											</div>
 										</div>
 										<div className="form-group">
 											<label className="d-block">
-												Total Income<span className="float-right">77%</span>
+												Ecole<span className="float-right">0</span>
 											</label>
 											<div className="progress progress-xs">
 												<div
 													className="progress-bar bg-blue"
 													role="progressbar"
-													aria-valuenow={77}
+													aria-valuenow={0}
 													aria-valuemin={0}
 													aria-valuemax={100}
-													style={{ width: '77%' }}
+													style={{ width: '0%' }}
 												/>
 											</div>
 										</div>
 										<div className="form-group">
 											<label className="d-block">
-												Total Expenses <span className="float-right">50%</span>
+												Energie <span className="float-right">0</span>
 											</label>
 											<div className="progress progress-xs">
 												<div
 													className="progress-bar bg-danger"
 													role="progressbar"
-													aria-valuenow={50}
+													aria-valuenow={0}
 													aria-valuemin={0}
 													aria-valuemax={100}
-													style={{ width: '50%' }}
+													style={{ width: '0%' }}
 												/>
 											</div>
 										</div>
 										<div className="form-group mb-0">
 											<label className="d-block">
-												Gross Profit <span className="float-right">23%</span>
+												Forage <span className="float-right">0</span>
 											</label>
 											<div className="progress progress-xs">
 												<div
 													className="progress-bar bg-green"
 													role="progressbar"
-													aria-valuenow={23}
+													aria-valuenow={0}
 													aria-valuemin={0}
 													aria-valuemax={100}
-													style={{ width: '23%' }}
+													style={{ width: '0%' }}
+												/>
+											</div>
+										</div>
+										
+										<div className="form-group">
+											<label className="d-block">
+												Centre de santé<span className="float-right">0</span>
+											</label>
+											<div className="progress progress-xs">
+												<div
+													className="progress-bar bg-blue"
+													role="progressbar"
+													aria-valuenow={0}
+													aria-valuemin={0}
+													aria-valuemax={100}
+													style={{ width: '0%' }}
+												/>
+											</div>
+										</div>
+										<div className="form-group">
+											<label className="d-block">
+												Bâtiment administratif<span className="float-right">0</span>
+											</label>
+											<div className="progress progress-xs">
+												<div
+													className="progress-bar bg-blue"
+													role="progressbar"
+													aria-valuenow={0}
+													aria-valuemin={0}
+													aria-valuemax={100}
+													style={{ width: '0%' }}
+												/>
+											</div>
+										</div>
+										<div className="form-group">
+											<label className="d-block">
+												Logement<span className="float-right">0</span>
+											</label>
+											<div className="progress progress-xs">
+												<div
+													className="progress-bar bg-blue"
+													role="progressbar"
+													aria-valuenow={0}
+													aria-valuemin={0}
+													aria-valuemax={100}
+													style={{ width: '0%' }}
+												/>
+											</div>
+										</div>
+										<div className="form-group">
+											<label className="d-block">
+												Marché communautaire<span className="float-right">0</span>
+											</label>
+											<div className="progress progress-xs">
+												<div
+													className="progress-bar bg-blue"
+													role="progressbar"
+													aria-valuenow={0}
+													aria-valuemin={0}
+													aria-valuemax={100}
+													style={{ width: '0%' }}
 												/>
 											</div>
 										</div>
 									</div>
 								</div> : ""}
-							{friendListClose ?
+							{/* {friendListClose ?
 								<div className={`card ${friendListOpen ? 'card-collapsed' : ""}`}>
 									<div className="card-header">
 										<h3 className="card-title">Friends</h3>
@@ -1280,8 +920,9 @@ class Menu extends Component {
 										</ul>
 									</div>
 								</div>
-								: ""}
-							<div className="card b-none">
+								: ""} */}
+
+							{/* <div className="card b-none">
 								<ul className="list-group">
 									<li className="list-group-item d-flex">
 										<div className="box-icon sm rounded bg-blue">
@@ -1324,7 +965,7 @@ class Menu extends Component {
 										</div>
 									</li>
 								</ul>
-							</div>
+							</div> */}
 						</div>
 						<div id="left-sidebar" className="sidebar ">
 							<h5 className="brand-name">BCECO</h5>
@@ -1358,187 +999,7 @@ class Menu extends Component {
 							{Routes.map((layout, i) => {
 								return <Route key={i} exact={layout.exact} path={layout.path} component={layout.component}></Route>
 							})}
-							{/* <Dashboard action={this.handler} dataFromParent={'dark'} /> */}
-							{/* <Route exact path="/hr-users" component={Users}>
-					</Route>
-					<Route exact path="/hr-department">
-						<Departments dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/hr-assure">
-						<Employee dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/hr-events">
-						<Events dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/hr-holidays">
-						<Holidays dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/hr-activities">
-						<Activities dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/hr-payroll">
-						<Payroll dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/hr-accounts">
-						<Accounts dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/hr-report">
-						<Report dataFromParent={'dark'} />
-					</Route>
-
-					<Route exact path="/project-dashboard">
-						<ProjectDashboard dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/project-list">
-						<ProjectList dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/project-taskboard">
-						<Taskboard dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/project-ticket">
-						<TicketList dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/project-ticket-details">
-						<TicketDetails dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/project-clients">
-						<Clients dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/project-todo">
-						<TodoList dataFromParent={'dark'} />
-					</Route>
-
-					<Route exact path="/jobportal-dashboard">
-						<JobPortalDashboard dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/jobportal-applicants">
-						<Applicants dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/jobportal-positions">
-						<Positions dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/jobportal-resumes">
-						<Resumes dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/jobportal-settings">
-						<Settings dataFromParent={'dark'} />
-					</Route>
-
-					<Route path="/login" component={Login} />
-					<Route path="/signup" component={SignUp} />
-					<Route path="/forgotpassword" component={ForgotPassword} />
-					<Route path="/notfound" component={NotFound} />
-					<Route path="/internalserver" component={InternalServer} />
-
-					<Route exact path="/icons">
-						<Icons dataFromParent={''} />
-					</Route>
-					<Route exact path="/icons-feather">
-						<IconsFeather dataFromParent={''} />
-					</Route>
-					<Route exact path="/icons-line">
-						<IconsLine dataFromParent={''} />
-					</Route>
-					<Route exact path="/icons-flag">
-						<IconsFlags dataFromParent={''} />
-					</Route>
-					<Route exact path="/icons-payments">
-						<IconsPayments dataFromParent={''} />
-					</Route>
-
-					<Route exact path="/charts">
-						<Charts dataFromParent={''} />
-					</Route>
-					<Route exact path="/charts-e">
-						<ChartsE dataFromParent={''} />
-					</Route>
-					<Route exact path="/charts-c3">
-						<ChartsC3 dataFromParent={''} />
-					</Route>
-					<Route exact path="/charts-knob">
-						<ChartsKnob dataFromParent={''} />
-					</Route>
-					<Route exact path="/charts-sparkline">
-						<ChartsSparkline dataFromParent={''} />
-					</Route>
-
-					<Route exact path="/forms">
-						<Forms dataFromParent={''} />
-					</Route>
-					<Route exact path="/form-advanced">
-						<FormAdvanced dataFromParent={''} />
-					</Route>
-					<Route exact path="/form-validation">
-						<FormValidation dataFromParent={''} />
-					</Route>
-					<Route exact path="/form-wizard">
-						<FormWizard dataFromParent={''} />
-					</Route>
-					<Route exact path="/form-summernote">
-						<FormSummernote dataFromParent={''} />
-					</Route>
-
-					<Route exact path="/gallery">
-						<Gallery dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/maps">
-						<Maps dataFromParent={'dark'} />
-					</Route> */}
-
-							{/* <Route exact path="/tables">
-						<Tables dataFromParent={''} />
-					</Route>
-					<Route exact path="/tables-datatable">
-						<DataTables dataFromParent={''} />
-					</Route>
-					<Route exact path="/tables-color">
-						<TablesColor dataFromParent={''} />
-					</Route>
-					<Route exact path="/tables-basic">
-						<TablesBasic dataFromParent={''} />
-					</Route>
-
-					<Route exact path="/widgets">
-						<Widgets dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/w-card">
-						<WCard dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/w-statistics">
-						<WStatistics dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/w-data">
-						<WData dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/w-social">
-						<WSocial dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/w-other">
-						<WOther dataFromParent={'dark'} />
-					</Route>
-
-					<Route exact path="/page-search">
-						<Search dataFromParent={''} />
-					</Route>
-					<Route exact path="/profile">
-						<Profile dataFromParent={'dark'} />
-					</Route>
-
-					<Route exact path="/app-calendar">
-						<AppCalender dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/app-contact">
-						<AppContact dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/app-chat">
-						<AppChart dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/app-filemanager">
-						<AppFileManager dataFromParent={'dark'} />
-					</Route>
-					<Route exact path="/app-setting">
-						<AppSetting dataFromParent={'dark'} />
-					</Route> */}
+							
 						</Switch>
 						<Footer />
 					</div>

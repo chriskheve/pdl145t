@@ -169,13 +169,13 @@ const Header = (props) => {
 								</div>
 							</div>
 							<div className="dropdown d-flex">
-								<a
+								{/* <a
 									href="/#"
 									className="nav-link icon d-none d-md-flex btn btn-default btn-icon ml-1"
 									data-toggle="dropdown"
 								>
 									<i className="fa fa-user" />
-								</a>
+								</a> */}
 								<div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 									{/* <NavLink to="/profile" className="dropdown-item">
 										<i className="dropdown-icon fe fe-user" /> Profile
@@ -196,9 +196,9 @@ const Header = (props) => {
 									<a className="dropdown-item" >
 										<i className="dropdown-icon fe fe-help-circle" /> Need help?
 									</a> */}
-									<a onClick={(e) =>handleLogout(e)} className="dropdown-item">
+									{/* <a onClick={(e) =>handleLogout(e)} className="dropdown-item">
 										<i className="dropdown-icon fe fe-log-out" /> Sign out
-									</a>
+									</a> */}
 								</div>
 							</div>
 						</div>

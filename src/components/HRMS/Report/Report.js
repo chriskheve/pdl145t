@@ -59,8 +59,8 @@ const Report = (props) => {
                 <div className="d-flex justify-content-between align-items-center">
                     <ul className="nav nav-tabs page-header-tab">
                         <li className="nav-item"><a className={`nav-link ${menu === 'accueil' ? 'active' : ""}`} id="Report-tab" onClick={()=>{handleMenu('accueil')}} href="#Report-Invoices">Accueil</a></li>
-                        <li className="nav-item"><a className={`nav-link ${menu === 'localite' ? 'active' : ""}`} id="Report-tab" onClick={()=>{handleMenu('localite')}} href="#Report-Invoices">Localite</a></li>
-                        <li className="nav-item"><a className={`nav-link ${menu === 'cs' ? 'active' : ""}`} id="Report-tab" onClick={()=>{handleMenu('cs')}} href="#Report-Invoices">Centre de santé</a></li>
+                        {/* <li className="nav-item"><a className={`nav-link ${menu === 'localite' ? 'active' : ""}`} id="Report-tab" onClick={()=>{handleMenu('localite')}} href="#Report-Invoices">Localite</a></li>
+                        <li className="nav-item"><a className={`nav-link ${menu === 'cs' ? 'active' : ""}`} id="Report-tab" onClick={()=>{handleMenu('cs')}} href="#Report-Invoices">Centre de santé</a></li> */}
                     </ul>
                 </div>
             </div>
