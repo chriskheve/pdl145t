@@ -11,7 +11,7 @@ export default class Footer extends Component {
 								<div className="row">
 									<div className="col-md-6 col-sm-12">
 										Copyright © {new Date().getFullYear() + ' '}
-										<a href="https://emergence-rdc.com/">Emergence-RDC</a>
+										<a href="https://bceco.cd">BCECO/UGCI</a>
 											.
 										</div>
 									{/* <div className="col-md-6 col-sm-12 text-md-right">
