@@ -10,6 +10,7 @@ import second from '../../assets/images/icons/location/image.jpeg'
 
 const TerritoireSandoa = () => {
   // let listOfImages;
+  //  test
   const [listOfImages, setListOfImages] = useState(null)
   const importAll = (r) => {
         return r.keys().map(r);
