@@ -1,0 +1,7 @@
+
+.sidebar {
+    z-index: 1 !important;
+}
+.map{
+    z-index: 0 !important;
+}

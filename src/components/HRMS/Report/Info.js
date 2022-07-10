@@ -200,7 +200,11 @@ function Info({provinceList, geojsonData}) {
         onEachFeature: onEachFeature
     }).addTo(map);
 
-    
+    L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+      minZoom: 5,
+      maxZoom: 19,
+      attribution: 'ThanksToGoogleMap' })
+.addTo(map);
     // L.geoJson(JSON.parse(cs)).addTo(map);
     }
     
