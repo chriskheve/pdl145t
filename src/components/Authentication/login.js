@@ -7,6 +7,8 @@ import isEmpty from 'validator/lib/isEmpty'
 import isEmail from 'validator/lib/isEmail'
 import { signup } from '../../api/login'
 
+
+
 const login = () => {
 	// eslint-disable-next-line react-hooks/rules-of-hooks
 	let history = useHistory()
@@ -107,7 +109,7 @@ const login = () => {
 									className="form-control"
 									id="exampleInputEmail1"
 									aria-describedby="emailHelp"
-									placeholder="Numéro de téléphone"
+									placeholder="Nom d'utilisateur  "
 									name='telephone'
 									onChange={handleChange}
 								/>
@@ -167,15 +169,15 @@ const login = () => {
 						<div className="carousel-item">
 							<img src="assets/images/slider2.svg" className="img-fluid" alt="login page" />
 							<div className="px-4 mt-4">
-								<h4>Multiple type d'utilisateur</h4>
-								<p>Offre aux différents types d'utilisateurs des interfaces de gestion.</p>
+								<h4>statistiques général </h4>
+								<p>Offre des données statistiques.</p>
 							</div>
 						</div>
 						<div className="carousel-item">
 							<img src="assets/images/slider3.svg" className="img-fluid" alt="login page" />
 							<div className="px-4 mt-4">
-								<h4>Management des ressources humaines</h4>
-								<p>Facilite au maximun la gestion de la ressource humaine.</p>
+								<h4>visibilité territoriale </h4>
+								<p>Permet une vision détaillé du territoire Congolais.</p>
 							</div>
 						</div>
 					</div>

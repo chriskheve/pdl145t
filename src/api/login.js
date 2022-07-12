@@ -8,18 +8,18 @@ export const signup = async (data) => {
     }
 
 
-    // const res = {
-    //     data : {
+    const res = {
+        data : {
 
-    //         token: "azerty",
-    //         user: {
-    //             id: 1,
-    //             prenom: "Chris",
-    //             nom: "Kheve"
-    //         }
-    //     }
-    // }
-    const response = await axios.post('/api/user/login', data, config) 
+            token: "azerty",
+            user: {
+                id: 1,
+                prenom: "Chris",
+                nom: "Kheve"
+            }
+        }
+    }
+    // const response = await axios.post('/api/user/login', data, config) 
     
-    return response
+    return res
 };

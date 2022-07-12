@@ -126,7 +126,7 @@ const Map = () => {
                   <Link to="/hr-users">Type d'ouvrage : {item.description && item.description}, 
                     {item.territoire && item.territoire.description}, République Démocratique du Congo {item.territoire && item.territoire.province && item.territoire.province.province}.
                   </Link> <br/>
-                  <img src={testimg} alt='test img' /> 
+                  {/* <img src={testimg} alt='test img' />  */}
                 </Popup>
               </Marker>
             )
