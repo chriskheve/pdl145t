@@ -24,6 +24,7 @@ class App extends Component {
 						<Route path="/forgotpassword" component={ForgotPassword} />
 						<Route path="/notfound" component={NotFound} />
 						<Route path="/internalserver" component={InternalServer} />
+						{/*  */}
 						{/* <Route component={Layout} /> */}
 						<ProtectedRoute component={Layout} />
 					</Switch>
