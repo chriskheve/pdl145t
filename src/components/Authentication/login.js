@@ -6,6 +6,8 @@ import { showErrorMsg } from '../../helpers/message'
 import isEmpty from 'validator/lib/isEmpty'
 import isEmail from 'validator/lib/isEmail'
 import { signup } from '../../api/login'
+import {slider1} from '../../assets/images/slider1.svg'
+
 
 
 
@@ -89,7 +91,8 @@ const login = () => {
 				<div className="card">
 					<div className="text-center mb-2">
 						<Link className="header-brand" to="/">
-							<i className="fe fe-command brand-logo" />
+							{/* <i className="fe fe-command brand-logo" /> */}
+							<img src={"assets/images/bceco-blue.PNG"} style={{width: "40px"}} alt="login page" />
 						</Link>
 					</div>
 					<div className="card-body">
@@ -160,13 +163,13 @@ const login = () => {
 				<div className="carousel slide" data-ride="carousel" data-interval={3000}>
 					<div className="carousel-inner">
 						<div className="carousel-item active">
-							<img src="assets/images/slider1.svg" className="img-fluid" alt="login page" />
+							<img src={"assets/images/slider1.svg"} className="img-fluid" alt="login page" />
 							<div className="px-4 mt-4">
-								<h4>Plateforme responsive</h4>
-								<p>L'application est compatible à n'importe quel type d'écran.</p>
+								<h4>Bureau central de coordination</h4>
+								<p>Plate-forme de géolocalisation des sites.</p>
 							</div>
 						</div>
-						<div className="carousel-item">
+						{/* <div className="carousel-item">
 							<img src="assets/images/slider2.svg" className="img-fluid" alt="login page" />
 							<div className="px-4 mt-4">
 								<h4>statistiques général </h4>
@@ -179,7 +182,7 @@ const login = () => {
 								<h4>visibilité territoriale </h4>
 								<p>Permet une vision détaillé du territoire Congolais.</p>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
